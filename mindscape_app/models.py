@@ -28,7 +28,9 @@ class UserModel(models.Model):
     user_name =models.CharField(max_length = 50)
     password = models.CharField(max_length = 50 ,default="password")
     pic = models.TextField(max_length=200, null =True, blank =True)
-    
+    name = models.TextField(max_length=200, null=True, blank = True)
+    phone = models.TextField(max_length=10, null=True, blank=True)
+       
     def __str__(self):
         return self.user_name
 # class CustomUser(AbstractBaseUser, PermissionsMixin):
